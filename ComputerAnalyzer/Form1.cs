@@ -123,9 +123,12 @@ namespace ComputerAnalyzer
                 //Win32_USBHub
                 foreach (var mo in new ManagementObjectSearcher("root\\cimv2", "select * from Win32_USBHub").Get())
                 {
+                    table.Rows.Add("Name", (string)mo["Name"]);
                     table.Rows.Add("DeviceID", (string)mo["DeviceID"]);
                     table.Rows.Add("PNPDeviceID", (string)mo["PNPDeviceID"]);
-                    table.Rows.Add("Description", (string)mo["Description"]);
+                    table.Rows.Add("Status", (string)mo["status"]);
+
+                    table.Rows.Add("", "");
                 }
             }
 
@@ -317,11 +320,6 @@ namespace ComputerAnalyzer
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hardwareGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

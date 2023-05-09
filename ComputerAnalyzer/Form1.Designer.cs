@@ -162,7 +162,6 @@
             this.hardwareGridView.RowTemplate.Height = 25;
             this.hardwareGridView.Size = new System.Drawing.Size(693, 344);
             this.hardwareGridView.TabIndex = 3;
-            this.hardwareGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hardwareGridView_CellContentClick);
             // 
             // label1
             // 
